@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author thanb_000
+ * @author dongnpc00702
  */
 public class AccountModel extends DatabaseManagement implements Serializable {
 

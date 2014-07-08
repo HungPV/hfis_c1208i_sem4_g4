@@ -9,10 +9,9 @@ import exception.CustomException;
 import java.io.Serializable;
 import java.sql.SQLException;
 import model.AccountModel;
-
 /**
  *
- * @author thanb_000
+ * @author dongnpc00702
  */
 public class AccountController implements Serializable{
     private AccountModel accountModel;
