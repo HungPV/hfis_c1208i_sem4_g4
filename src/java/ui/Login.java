@@ -16,7 +16,7 @@ import javax.faces.bean.SessionScoped;
 
 /**
  *
- * @author thanb_000
+ * @author dongnpc00702
  */
 @ManagedBean(name = "login")
 @SessionScoped
@@ -40,9 +40,6 @@ public class Login implements Serializable {
         return accountController;
     }
 
-    /**
-     * Creates a new instance of Login
-     */
     public Login() {
     }
 
