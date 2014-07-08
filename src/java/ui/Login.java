@@ -21,7 +21,6 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean(name="login")
 @SessionScoped
 public class Login implements Serializable {
-   
     private String username;
     private String password;
     private Boolean role;
