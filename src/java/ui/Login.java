@@ -18,9 +18,10 @@ import javax.faces.bean.SessionScoped;
  *
  * @author thanb_000
  */
-@ManagedBean(name="login")
+@ManagedBean(name = "login")
 @SessionScoped
 public class Login implements Serializable {
+
     private String username;
     private String password;
     private Boolean role;
@@ -30,15 +31,15 @@ public class Login implements Serializable {
     public Account getUser() {
         return user;
     }
-    
     private AccountController accountController;
 
     public AccountController getAccountController() {
-        if (accountController == null)
+        if (accountController == null) {
             accountController = new AccountController();
+        }
         return accountController;
     }
-    
+
     /**
      * Creates a new instance of Login
      */
@@ -54,25 +55,25 @@ public class Login implements Serializable {
                 } else {
                     this.message = "Invalid username or password";
                 }
-            } catch (    ClassNotFoundException | SQLException | CustomException ex) {
+            } catch (ClassNotFoundException | SQLException | CustomException ex) {
                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                 this.message = "Error: " + ex.getMessage();
             }
         }
     }
-    
+
     public void logout() {
         role = null;
     }
-    
+
     public boolean isLoggedIn() {
         return role != null && role == true;
     }
-    
+
     public boolean isAdmin() {
         return isLoggedIn() && user != null && user.isAdmin();
     }
-    
+
     public String getUsername() {
         return username;
     }
